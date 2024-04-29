@@ -41,7 +41,7 @@ string encodeNRZI(string input) {
     for(unsigned long i = 0; i < input.length(); i++) {
         c = input[i];
         if(c == '0')
-            state = state ? 0 : 1;
+            state = !state;
         output += state ? "+V|" : "-V|";
     }
 
