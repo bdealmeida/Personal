@@ -1,0 +1,15 @@
+Compiled with command: g++ encode.cpp -o encode -Wall -Werror
+
+Run with format: ./encode INPUT.DATA <encoding scheme index>
+
+The allowed encoding schemes are as follows, where the index 
+number should be put as the commandline argument:
+  0: NRZ-L
+  1: NRZ-I
+  2: B-AMI
+  3: Manchester
+  4: D-Manchester
+
+The output file is named after the encoding scheme used. For
+example, if NRZ-L is selected, the output file is named
+  OUTPUT.NRZL
