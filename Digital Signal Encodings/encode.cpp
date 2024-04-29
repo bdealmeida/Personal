@@ -14,14 +14,8 @@ using namespace std;
 string encodeNRZL(string input) {
     string output = "|";
     
-    char c;
-    for(unsigned long i = 0; i < input.length(); i++) {
-        c = input[i];
-        if(c == '1')
-            output += "+V|";
-        else if(c == '0')
-            output += "-V|";
-    }
+    for(unsigned long i = 0; i < input.length(); i++)
+        output += input[i] == '1' ? "+V|" : "-V";
 
     return output;
 }
